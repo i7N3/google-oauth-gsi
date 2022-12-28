@@ -1,14 +1,14 @@
 {
     "private": false,
-    "name": "google-oauth-library",
+    "name": "google-oauth-gsi",
     "version": "0.0.0-development",
-    "main": "./dist/google-oauth-library.cjs",
-    "module": "./dist/google-oauth-library.mjs",
-    "types": "./dist/google-oauth-library.d.ts",
+    "main": "./dist/google-oauth-gsi.cjs",
+    "module": "./dist/google-oauth-gsi.mjs",
+    "types": "./dist/google-oauth-gsi.d.ts",
     "exports": {
         ".": {
-            "require": "./dist/google-oauth-library.cjs",
-            "import": "./dist/google-oauth-library.mjs"
+            "require": "./dist/google-oauth-gsi.cjs",
+            "import": "./dist/google-oauth-gsi.mjs"
         }
     },
     "files": [

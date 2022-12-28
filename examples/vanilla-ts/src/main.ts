@@ -4,7 +4,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </button>
 `;
 
-import { GoogleOAuthProvider } from 'google-oauth-library';
+import { GoogleOAuthProvider } from 'google-oauth-gsi';
 
 const provider = new GoogleOAuthProvider({
     clientId: import.meta.env.VITE_GOOGLE_CLIENT_ID,

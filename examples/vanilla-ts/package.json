@@ -13,6 +13,6 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "google-oauth-library": "file:../../google-oauth-library-0.0.1.tgz"
+        "google-oauth-gsi": "@latest"
     }
 }

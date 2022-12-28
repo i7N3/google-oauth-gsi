@@ -1,4 +1,4 @@
-import { GoogleOAuthProvider } from 'google-oauth-library-ts';
+import { GoogleOAuthProvider } from 'google-oauth-gsi';
 import { PUBLIC_GOOGLE_CLIENT_ID } from '$env/static/public';
 
 export const provider = new GoogleOAuthProvider({

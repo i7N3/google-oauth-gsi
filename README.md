@@ -1,4 +1,4 @@
-# google-oauth-library (OAuth2 | Google)
+# google-oauth-gsi (OAuth2 | Google)
 
 A user-friendly API for GIS SDK, using the new [**Google Identity Services SDK**](https://developers.google.com/identity/gsi/web) 🚀
 
@@ -11,7 +11,7 @@ A user-friendly API for GIS SDK, using the new [**Google Identity Services SDK**
 ## Install
 
 ```
-$ pnpm add google-oauth-library@latest
+$ pnpm add google-oauth-gsi@latest
 ```
 
 ## Seamless sign-in and sign-up flows
@@ -37,7 +37,7 @@ OAuth 2.0 implicit and authorization code flows for web apps
 3. Create instance of `GoogleOAuthProvider` somewhere in your application.
 
 ```ts
-import { GoogleOAuthProvider } from 'google-oauth-library';
+import { GoogleOAuthProvider } from 'google-oauth-gsi';
 
 export const googleProvider = new GoogleOAuthProvider({
     clientId: process.env.PUBLIC_GOOGLE_CLIENT_ID,
@@ -93,7 +93,7 @@ const renderButton = provider.useRenderButton({
 > If you are using one tap login, when logging user out consider [this issue](https://developers.google.com/identity/gsi/web/guides/automatic-sign-in-sign-out#sign-out) may happen, to prevent it call `googleLogout` when logging user out from your application.
 
 ```ts
-import { googleLogout } from 'google-oauth-library';
+import { googleLogout } from 'google-oauth-gsi';
 
 googleLogout();
 ```
@@ -131,7 +131,7 @@ const login = googleProvider.useGoogleLogin({
 #### Checks if the user granted all the specified scope or scopes
 
 ```ts
-import { hasGrantedAllScopesGoogle } from 'google-oauth-library';
+import { hasGrantedAllScopesGoogle } from 'google-oauth-gsi';
 
 const hasAccess = hasGrantedAllScopesGoogle(
     tokenResponse,
@@ -143,7 +143,7 @@ const hasAccess = hasGrantedAllScopesGoogle(
 #### Checks if the user granted any of the specified scope or scopes
 
 ```ts
-import { hasGrantedAnyScopeGoogle } from 'google-oauth-library';
+import { hasGrantedAnyScopeGoogle } from 'google-oauth-gsi';
 
 const hasAccess = hasGrantedAnyScopeGoogle(
     tokenResponse,
