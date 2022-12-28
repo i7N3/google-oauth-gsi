@@ -1,6 +1,6 @@
 {
+    "private": false,
     "name": "google-oauth-library",
-    "private": true,
     "version": "0.0.0-development",
     "main": "./dist/google-oauth-library.cjs",
     "module": "./dist/google-oauth-library.mjs",
