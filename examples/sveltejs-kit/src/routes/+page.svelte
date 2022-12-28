@@ -6,7 +6,7 @@
 		hasGrantedAnyScopeGoogle,
 		hasGrantedAllScopesGoogle,
 		type SuccessAuthCodeResponse,
-	} from "google-oauth-library";
+	} from "google-oauth-library-ts";
 
 	async function onGoogleLoginSuccess(tokenResponse: SuccessAuthCodeResponse) {
 		console.log("(auth-code) tokenResponse: ", tokenResponse)

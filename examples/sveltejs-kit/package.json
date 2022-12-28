@@ -26,6 +26,6 @@
 		"vite": "^4.0.0"
 	},
 	"dependencies": {
-		"google-oauth-library": "file:../../google-oauth-library-0.0.1.tgz"
+		"google-oauth-library-ts": "file:../../google-oauth-library-ts-0.0.0-development.tgz"
 	}
 }

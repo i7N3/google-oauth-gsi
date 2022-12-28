@@ -5,7 +5,7 @@ specifiers:
   '@sveltejs/kit': ^1.0.0
   '@types/cookie': ^0.5.1
   google-auth-library: ^8.7.0
-  google-oauth-library: file:../../google-oauth-library-0.0.1.tgz
+  google-oauth-library-ts: file:../../google-oauth-library-ts-0.0.0-development.tgz
   prettier: ^2.8.0
   prettier-plugin-svelte: ^2.8.1
   svelte: ^3.54.0
@@ -15,7 +15,7 @@ specifiers:
   vite: ^4.0.0
 
 dependencies:
-  google-oauth-library: file:../../google-oauth-library-0.0.1.tgz
+  google-oauth-library-ts: file:../../google-oauth-library-ts-0.0.0-development.tgz
 
 devDependencies:
   '@sveltejs/adapter-auto': 1.0.0_@sveltejs+kit@1.0.1
@@ -1273,8 +1273,8 @@ packages:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
     dev: true
 
-  file:../../google-oauth-library-0.0.1.tgz:
-    resolution: {integrity: sha512-RXR3a7PK9bmNSpIU5seNYGyeCgLrg6PG8sJkq54qWr/OHYw9DNY1kkkUSYkqvoZNDf+LiYW6p7qoeyrcD8bKWg==, tarball: file:../../google-oauth-library-0.0.1.tgz}
-    name: google-oauth-library
-    version: 0.0.1
+  file:../../google-oauth-library-ts-0.0.0-development.tgz:
+    resolution: {integrity: sha512-xNjw3oGPMmDZ/0sZv049VpbWGcSfD4hsDTB8s38fY0L8I+wcscYiaoksV7fnnHbkvLnaHXEB+pvgykwqeQqpmA==, tarball: file:../../google-oauth-library-ts-0.0.0-development.tgz}
+    name: google-oauth-library-ts
+    version: 0.0.0-development
     dev: false
