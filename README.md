@@ -251,4 +251,6 @@ const hasAccess = hasGrantedAnyScopeGoogle(
 4. Now you can add `.tgz` file to your project and test changes. Run `pnpm add ~/path-to-tgz-file.tgz` to add package to your project.
 5. Create Pull request with new changes.
 
-Inspired by [react-oauth](https://github.com/MomenSherif/react-oauth)
+> Commit with `pnpm commit`!
+
+**Inspired by** [react-oauth](https://github.com/MomenSherif/react-oauth)
