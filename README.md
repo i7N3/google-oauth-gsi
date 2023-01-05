@@ -51,7 +51,7 @@ export const googleProvider = new GoogleOAuthProvider({
 ```ts
 import { googleProvider } from './services';
 
-const login = provider.useGoogleLogin({
+const login = googleProvider.useGoogleLogin({
     flow: 'auth-code',
     onSuccess: (res) => console.log('Logged in with google', res),
     onError: (err) => console.error('Failed to login with google', err),
@@ -65,7 +65,7 @@ const login = provider.useGoogleLogin({
 ```ts
 import { googleProvider } from './services';
 
-const oneTap = provider.useGoogleOneTapLogin({
+const oneTap = googleProvider.useGoogleOneTapLogin({
     cancel_on_tap_outside: true,
     onSuccess: (res) => console.log('Logged in with google', res),
 });
@@ -79,7 +79,7 @@ or
 import { buttonEl } from './somewhere';
 import { googleProvider } from './services';
 
-const renderButton = provider.useRenderButton({
+const renderButton = googleProvider.useRenderButton({
     useOneTap: true,
     element: buttonEl as HTMLElement,
     onError: () => console.error('Failed to render button'),
