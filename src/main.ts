@@ -46,10 +46,6 @@ export default class GoogleOAuthProvider {
             if (onScriptLoadError) onScriptLoadError();
         };
         document.body.appendChild(scriptTag);
-
-        window.addEventListener('unload', () => {
-            document.body.removeChild(scriptTag);
-        });
     }
 
     useGoogleLogin(opts: UseGoogleLoginOptions) {
@@ -137,10 +133,6 @@ export default class GoogleOAuthProvider {
         });
 
         window.google?.accounts.id.prompt(promptMomentNotification);
-
-        window.addEventListener('unload', () => {
-            window.google?.accounts.id.cancel();
-        });
     }
 
     useRenderButton(opts: GoogleLoginProps) {
@@ -201,9 +193,5 @@ export default class GoogleOAuthProvider {
         if (useOneTap) {
             window.google?.accounts.id.prompt(promptMomentNotification);
         }
-
-        window.addEventListener('unload', () => {
-            if (useOneTap) window.google?.accounts.id.cancel();
-        });
     }
 }
