@@ -10,6 +10,7 @@
         "sourceMap": true,
         "resolveJsonModule": true,
         "esModuleInterop": true,
+        "strictNullChecks": true,
         "noEmit": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
