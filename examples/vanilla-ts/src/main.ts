@@ -28,6 +28,7 @@ document.querySelector<HTMLDivElement>('#app')!.appendChild(buttonEl);
 const renderButton = provider.useRenderButton({
     element: buttonEl,
     useOneTap: true,
+    width: 200,
     onError: () => console.error('Failed to render button'),
     onSuccess: (res) =>
         console.log('Logged in with google (render button)', res),
