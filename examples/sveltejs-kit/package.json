@@ -26,6 +26,6 @@
 		"vite": "^4.0.0"
 	},
 	"dependencies": {
-		"google-oauth-gsi": "@latest"
+		"google-oauth-gsi": "1.3.4"
 	}
 }
