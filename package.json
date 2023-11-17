@@ -1,7 +1,7 @@
 {
     "private": false,
     "name": "google-oauth-gsi",
-    "version": "0.0.0-development",
+    "version": "0.0.0",
     "main": "./dist/google-oauth-gsi.cjs",
     "module": "./dist/google-oauth-gsi.mjs",
     "types": "./dist/google-oauth-gsi.d.ts",
@@ -20,7 +20,7 @@
         "test": "jest --runInBand",
         "test:coverage": "jest --runInBand --coverage",
         "lint:scripts": "eslint . --ext .ts",
-        "commit": "git-cz",
+        "commit": "./node_modules/.bin/git-cz",
         "semantic-release": "semantic-release --branches main"
     },
     "devDependencies": {
@@ -29,6 +29,7 @@
         "@types/node": "^18.7.16",
         "@typescript-eslint/eslint-plugin": "^5.36.2",
         "@typescript-eslint/parser": "^5.36.2",
+        "commitizen": "^4.3.0",
         "cz-conventional-changelog": "^3.3.0",
         "dts-bundle-generator": "^6.13.0",
         "eslint": "^8.23.0",
