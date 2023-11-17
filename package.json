@@ -1,7 +1,7 @@
 {
     "private": false,
     "name": "google-oauth-gsi",
-    "version": "0.0.0",
+    "version": "3.0.0",
     "main": "./dist/google-oauth-gsi.cjs",
     "module": "./dist/google-oauth-gsi.mjs",
     "types": "./dist/google-oauth-gsi.d.ts",
