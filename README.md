@@ -7,6 +7,7 @@ A user-friendly API for GIS SDK, using the new [**Google Identity Services SDK**
 -   🕊 Dependency free
 -   🔑 Fully Typed APIs
 -   💡 Framework agnostic
+-   [Supports FedCM](https://developers.google.com/identity/gsi/web/guides/fedcm-migration)
 
 ## Install
 

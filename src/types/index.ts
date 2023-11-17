@@ -1,3 +1,5 @@
+// TODO: Update types to match the latest gsi client
+
 // https://github.com/timocov/dts-bundle-generator/issues/102#issuecomment-587349968
 /// <reference path="./global.d.ts" />
 
@@ -52,6 +54,13 @@ export interface IdConfiguration {
      * field in the OpenID Connect docs.
      */
     hosted_domain?: string;
+    /**
+     * Allow the browser to control user sign-in prompts
+     * and mediate the sign-in flow between your website and Google.
+     *
+     * @default true
+     */
+    use_fedcm_for_prompt?: boolean;
 }
 
 export interface CredentialResponse {
@@ -96,13 +105,31 @@ export interface GsiButtonConfiguration {
 }
 
 export interface PromptMomentNotification {
-    /** Is this notification for a display moment? */
+    /**
+     * Is this notification for a display moment?
+     *
+     * Note. When FedCM is enabled, notifications can be
+     * received up to 1 minute after the actual event.
+     *
+     * References:
+     * - https://developers.google.com/identity/gsi/web/guides/fedcm-migration
+     *
+     * */
     isDisplayMoment: () => boolean;
     /** Is this notification for a display moment, and the UI is displayed? */
     isDisplayed: () => boolean;
     /** Is this notification for a display moment, and the UI isn't displayed? */
     isNotDisplayed: () => boolean;
-    /** The detailed reason why the UI isn't displayed */
+    /**
+     * The detailed reason why the UI isn't displayed
+     *
+     * Note. Avoid using opt_out_or_no_session.
+     * When FedCM is enabled, this value is not supported.
+     *
+     * References:
+     * - https://developers.google.com/identity/gsi/web/guides/fedcm-migration
+     *
+     * */
     getNotDisplayedReason: () =>
         | 'browser_not_supported'
         | 'invalid_client'
@@ -389,6 +416,7 @@ export type SuccessTokenResponse = Omit<
     TokenResponse,
     'error' | 'error_description' | 'error_uri'
 >;
+
 export type ErrorTokenResponse = Pick<
     TokenResponse,
     'error' | 'error_description' | 'error_uri'
@@ -453,6 +481,10 @@ export interface UseGoogleOneTapLoginOptions {
     promptMomentNotification?: MomenListener;
     cancel_on_tap_outside?: boolean;
     hosted_domain?: string;
+    /**
+     * @default true
+     */
+    use_fedcm_for_prompt?: boolean;
 }
 
 export type GoogleLoginProps = {

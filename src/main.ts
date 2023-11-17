@@ -33,6 +33,16 @@ export default class GoogleOAuthProvider {
         onScriptLoadSuccess,
         onScriptLoadError,
     }: UseLoadGsiScriptOptions = {}) {
+        /**
+         *
+         * TODO: think about how to make this more flexible.
+         *
+         * This method of initializing the script has some security implications.
+         *
+         * - What if we want to serve script from our own domain?
+         * - What if we want to use nonce?
+         *
+         */
         const scriptTag = document.createElement('script');
         scriptTag.src = 'https://accounts.google.com/gsi/client';
         scriptTag.async = true;
@@ -78,7 +88,6 @@ export default class GoogleOAuthProvider {
                 if (onError && response.error) return onError(response);
                 if (onSuccess) onSuccess(response as any);
             },
-
             error_callback: (nonOAuthError: NonOAuthError) => {
                 if (onNonOAuthError) onNonOAuthError(nonOAuthError);
             },
@@ -108,6 +117,7 @@ export default class GoogleOAuthProvider {
         onError,
         onSuccess,
         hosted_domain,
+        use_fedcm_for_prompt,
         cancel_on_tap_outside,
         promptMomentNotification,
     }: UseGoogleOneTapLoginOptions) {
@@ -118,6 +128,7 @@ export default class GoogleOAuthProvider {
             hosted_domain,
             cancel_on_tap_outside,
             client_id: this.clientId,
+            use_fedcm_for_prompt: use_fedcm_for_prompt ?? true,
             callback: (credentialResponse: GoogleCredentialResponse) => {
                 if (!credentialResponse?.credential && onError) {
                     return onError();
@@ -156,12 +167,14 @@ export default class GoogleOAuthProvider {
         width,
         locale,
         click_listener,
+        use_fedcm_for_prompt,
         ...props
     }: GoogleLoginProps) {
         if (!this.scriptLoadedSuccessfully) return;
 
         window.google?.accounts.id.initialize({
             client_id: this.clientId,
+            use_fedcm_for_prompt: use_fedcm_for_prompt ?? true,
             callback: (credentialResponse: GoogleCredentialResponse) => {
                 if (!credentialResponse?.credential && onError) {
                     return onError();
