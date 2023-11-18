@@ -57,8 +57,6 @@ export interface IdConfiguration {
     /**
      * Allow the browser to control user sign-in prompts
      * and mediate the sign-in flow between your website and Google.
-     *
-     * @default true
      */
     use_fedcm_for_prompt?: boolean;
 }
@@ -481,9 +479,6 @@ export interface UseGoogleOneTapLoginOptions {
     promptMomentNotification?: MomenListener;
     cancel_on_tap_outside?: boolean;
     hosted_domain?: string;
-    /**
-     * @default true
-     */
     use_fedcm_for_prompt?: boolean;
 }
 

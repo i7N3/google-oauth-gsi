@@ -7,7 +7,7 @@ A user-friendly API for GIS SDK, using the new [**Google Identity Services SDK**
 -   🕊 Dependency free
 -   🔑 Fully Typed APIs
 -   💡 Framework agnostic
--   [Supports FedCM](https://developers.google.com/identity/gsi/web/guides/fedcm-migration)
+-   [FedCM Support](https://developers.google.com/identity/gsi/web/guides/fedcm-migration)
 
 ## Install
 
@@ -201,6 +201,7 @@ const hasAccess = hasGrantedAnyScopeGoogle(
 |          | promptMomentNotification | `(notification: PromptMomentNotification) => void` | [PromptMomentNotification](https://developers.google.com/identity/gsi/web/reference/js-reference) methods and description                                                                                                                                                         |
 |          | cancel_on_tap_outside    | `boolean`                                          | Controls whether to cancel the prompt if the user clicks outside of the prompt                                                                                                                                                                                                    |
 |          | hosted_domain            | `string`                                           | If your application knows the Workspace domain the user belongs to, use this to provide a hint to Google. For more information, see the [hd](https://developers.google.com/identity/protocols/oauth2/openid-connect#authenticationuriparameters) field in the OpenID Connect docs |
+|          | use_fedcm_for_prompt     | `boolean`                                          | Allow the browser to control user sign-in prompts and mediate the sign-in flow between your website and Google. Defaults to false. See [Migrate to FedCM](https://developers.google.com/identity/gsi/web/guides/fedcm-migration) page for more information.                       |
 
 ### useRenderButton
 
@@ -234,6 +235,7 @@ const hasAccess = hasGrantedAnyScopeGoogle(
 |          | itp_support                        | `boolean`                                                     | Enables upgraded One Tap UX on ITP browsers                                                                                                                                                                                                                                       |
 |          | hosted_domain                      | `string`                                                      | If your application knows the Workspace domain the user belongs to, use this to provide a hint to Google. For more information, see the [hd](https://developers.google.com/identity/protocols/oauth2/openid-connect#authenticationuriparameters) field in the OpenID Connect docs |
 |          | click_listener                     | `function`                                                    | If set, this [function](https://developers.google.com/identity/gsi/web/reference/js-reference#click_listener) will be called when the Sign in with Google button is clicked.                                                                                                      |
+|          | use_fedcm_for_prompt               | `boolean`                                                     | Allow the browser to control user sign-in prompts and mediate the sign-in flow between your website and Google. Defaults to false. See [Migrate to FedCM](https://developers.google.com/identity/gsi/web/guides/fedcm-migration) page for more information.                       |
 
 ## How to develop?
 

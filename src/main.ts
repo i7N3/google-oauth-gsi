@@ -126,9 +126,9 @@ export default class GoogleOAuthProvider {
 
         window.google?.accounts.id.initialize({
             hosted_domain,
+            use_fedcm_for_prompt,
             cancel_on_tap_outside,
             client_id: this.clientId,
-            use_fedcm_for_prompt: use_fedcm_for_prompt ?? true,
             callback: (credentialResponse: GoogleCredentialResponse) => {
                 if (!credentialResponse?.credential && onError) {
                     return onError();
@@ -174,7 +174,7 @@ export default class GoogleOAuthProvider {
 
         window.google?.accounts.id.initialize({
             client_id: this.clientId,
-            use_fedcm_for_prompt: use_fedcm_for_prompt ?? true,
+            use_fedcm_for_prompt,
             callback: (credentialResponse: GoogleCredentialResponse) => {
                 if (!credentialResponse?.credential && onError) {
                     return onError();
