@@ -8,7 +8,8 @@
     "exports": {
         ".": {
             "require": "./dist/google-oauth-gsi.cjs",
-            "import": "./dist/google-oauth-gsi.mjs"
+            "import": "./dist/google-oauth-gsi.mjs",
+            "types": "./dist/google-oauth-gsi.d.ts"
         }
     },
     "files": [
